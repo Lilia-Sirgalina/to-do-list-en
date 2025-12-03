@@ -1,16 +1,33 @@
-# React + Vite
+# To Do List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Demo  
+🔗 [View the app on Netlify](https://lily-todo-list.netlify.app)
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This application allows users to create a to-do list and cross out completed tasks.  
+The app is built with React using Vite. 
+The application uses class components.
+To-do list items are added using the Add button. When the button is clicked, the new item is added to the listArray array using the .push() method and displayed in the <li> list using the .map() method.
 
-## React Compiler
+When a list item is clicked, the .crossed class is applied to it, which marks the item as crossed out in red.
+When the Delete button is pressed, the list is cleared and all items are removed.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+No installation is required.
 
-## Expanding the ESLint configuration
+## Here's what the app looks like:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![App Screenshot](screenshot-lista-tareas.JPG)
+
+### How to Use:
+1. Enter tasks one by one, pressing Enter after each entry or clicking the **"Añadir"** button.
+2. The added tasks will appear in the list below.
+3. To cross out a task, click on it once.
+4. To delete a task, double-click on it.
+
+### Features:
+- Adding and removing list items using JavaScript and GSAP animations.
+- Intuitive user interface.
+
+## Requirements
+- A modern web browser with JavaScript support.
