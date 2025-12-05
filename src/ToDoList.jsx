@@ -35,6 +35,11 @@ export class ToDoList extends Component {
         li.classList.toggle('crossed');        
     }
 
+    deleteItem(index) {        
+        let removedItem = this.state.listArray.filter((item, i) => i !== index);             
+        this.setState({listArray: removedItem}); 
+    }
+
     deleteList() {
         let list = this.state.listArray;
         list = [];
@@ -58,7 +63,7 @@ export class ToDoList extends Component {
                     <button className="btn" onClick = {() => this.addItem(this.state.item)}>Add</button>
                     <ul>
                         {this.state.listArray.map((item, index) => (
-                            <li onClick={this.crossItem} key={index}>{item}</li>
+                            <li onClick={this.crossItem} onDoubleClick = {() => this.deleteItem(index)} key={index}>{item}</li>
                         ))}
                     </ul>
                     <button className="btn" onClick={() => this.deleteList()}>Delete</button>
